@@ -1,4 +1,4 @@
-package com.example.countryapp.data
+ /*package com.example.countryapp.data
 
 import com.example.countryapp.data.Currencies
 import com.google.gson.annotations.SerializedName
@@ -14,4 +14,4 @@ data class responseItem (
     val flag: String,
     @SerializedName("name")
     val name: Name,
-)
+) */
