@@ -17,6 +17,8 @@ class CountryAdapter(private var countries: List<Country>) : RecyclerView.Adapte
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvCountryName: TextView = itemView.findViewById(R.id.tvCountryName)
         val tvCountryCapital: TextView = itemView.findViewById(R.id.tvCountryCapital)
+
+
         val tvCountryArea: TextView = itemView.findViewById(R.id.tvCountryArea)
         val tvCountryCurrency: TextView = itemView.findViewById(R.id.tvCountryCurrency)
         val imgCountry: ImageView = itemView.findViewById(R.id.imgCountry)
@@ -34,14 +36,17 @@ class CountryAdapter(private var countries: List<Country>) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val country = countries[position]
         holder.tvCountryName.text = country.name.common
-        holder.tvCountryCapital.text = "Capital: ${country.capital.joinToString(", ")}"
+        holder.tvCountryCapital.text = if(country.capital != null && country.capital.isNotEmpty()){
+            "Capital: ${country.capital.joinToString(", ")}"
+        }else{
+            "Capital: N/A"
+        }
         holder.tvCountryArea.text = "Area: ${country.area}"
         holder.tvCountryCurrency.text =
             "Population: ${country.currencies?: "N/A"}"
 
         holder.imgCountry.load(country.flag.png) {
             crossfade(true)
-            size(ViewSizeResolver(holder.imgCountry))
         }
 
 
