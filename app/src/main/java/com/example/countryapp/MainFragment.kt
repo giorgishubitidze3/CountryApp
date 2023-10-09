@@ -30,8 +30,7 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[ViewModel::class.java]
-
+        viewModel = ViewModelProvider(requireActivity())[ViewModel::class.java]
 
         view?.findViewById<Button>(R.id.btnEurope)?.setOnClickListener {
             viewModel.fetchDataForRegion("europe")

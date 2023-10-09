@@ -29,7 +29,8 @@ class SecondaryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val viewModel = ViewModelProvider(this)[ViewModel::class.java]
+        val viewModel = ViewModelProvider(requireActivity()).get(ViewModel::class.java)
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvCountries)
 
         val adapter = CountryAdapter(emptyList())

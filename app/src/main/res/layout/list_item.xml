@@ -15,52 +15,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Country Area"
+        android:text="km²"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvCountryCurrency"
         app:layout_constraintStart_toEndOf="@+id/tvCountryArea"
-        app:layout_constraintTop_toBottomOf="@+id/tvCapitalResponse" />
-
-    <TextView
-        android:id="@+id/tvCapitalResponse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Country Capital"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvCountryCapital"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameResponse" />
-
-    <TextView
-        android:id="@+id/tvCurrencyResponse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Country Currency"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvCountryCurrency"
-        app:layout_constraintTop_toBottomOf="@+id/tvAreaResponse" />
-
-    <TextView
-        android:id="@+id/tvNameResponse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:text="Country Name"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/tvCountryName"
-        app:layout_constraintTop_toBottomOf="@+id/imgCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCountryCapital" />
 
     <ImageView
         android:id="@+id/imgCountry"
