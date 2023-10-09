@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.size.ViewSizeResolver
 import com.example.countryapp.R
 
 
@@ -36,10 +37,11 @@ class CountryAdapter(private var countries: List<Country>) : RecyclerView.Adapte
         holder.tvCountryCapital.text = "Capital: ${country.capital.joinToString(", ")}"
         holder.tvCountryArea.text = "Area: ${country.area}"
         holder.tvCountryCurrency.text =
-            "Currency: ${country.currencies?: "N/A"}"
+            "Population: ${country.currencies?: "N/A"}"
 
-        holder.imgCountry.load(country.flag) {
+        holder.imgCountry.load(country.flag.png) {
             crossfade(true)
+            size(ViewSizeResolver(holder.imgCountry))
         }
 
 

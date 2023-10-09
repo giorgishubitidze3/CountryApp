@@ -5,11 +5,12 @@ import com.google.gson.annotations.SerializedName
 data class Country(
     @SerializedName("name")
     val name: Name,
-    @SerializedName("currencies")
-    val currencies: Currencies,
+    @SerializedName("population")
+    val currencies: Int,  // decided to change it into population and leave the val name as it is
     val capital: List<String>,
     val area: Double,
-    val flag: String
+    @SerializedName("flags")
+    val flag: Flags
     // Add other properties as needed to match your JSON structure
 )
 
@@ -32,4 +33,13 @@ data class Currencies(
     val name: String,
     @SerializedName("symbol")
     val symbol: String
+)
+
+data class Flags(
+    @SerializedName("png")
+    val png: String,
+    @SerializedName("svg")
+    val svg: String,
+    @SerializedName("alt")
+    val alt: String
 )
