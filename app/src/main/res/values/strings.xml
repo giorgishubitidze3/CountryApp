@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">CountryApp</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="capital">Capital:</string>
+    <string name="area">Area:</string>
+    <string name="currency">Currency</string>
+    <string name="km2">km²</string>
+    <string name="name">Name:</string>
+
 </resources>
